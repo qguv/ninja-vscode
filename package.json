@@ -20,7 +20,7 @@
         "grammars": [{
             "language": "ninja",
             "scopeName": "source.ninja",
-            "path": "./syntaxes/ninja.tmLanguage"
+            "path": "./syntaxes/ninja.tmLanguage.json"
         }]
     }
 }
