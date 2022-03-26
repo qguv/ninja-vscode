@@ -1,47 +1,47 @@
 {
-  "fileTypes": [
-    "ninja"
-  ],
   "name": "Ninja",
+  "scopeName": "source.ninja",
+  "fileTypes": ["ninja"],
+  "uuid": "e837e9ed-6ad9-4103-b705-50503a86fc83",
+
   "patterns": [
     {
+      "comment": "Comment line.",
+      "name": "comment.line.number-sign.ninja",
+      "match": "(#).*$\\n?",
       "captures": {
         "1": {
           "name": "punctuation.definition.comment.ninja"
         }
-      },
-      "comment": "Comment line.",
-      "match": "(#).*$\\n?",
-      "name": "comment.line.number-sign.ninja"
+      }
     },
     {
+      "comment": "Rule keyword and keywords for a rule.",
       "begin": "^(rule)\\b",
       "beginCaptures": {
         "1": {
           "name": "keyword.other.ninja"
         }
       },
-      "comment": "Rule keyword and keywords for a rule.",
-      "end": "^(?=\\S)",
       "patterns": [
         {
           "include": "$self"
         },
         {
-          "match": "\\b(?:command|deps|depfile|description|generator|pool|restat|rspfile|rspfile_content)\\b",
-          "name": "keyword.other.ninja"
+          "name": "keyword.other.ninja",
+          "match": "\\b(?:command|deps|depfile|description|generator|pool|restat|rspfile|rspfile_content)\\b"
         }
-      ]
+      ],
+      "end": "^(?=\\S)"
     },
     {
+      "comment": "Pool keyword and keywords for a pool.",
       "begin": "^(pool)\\b",
       "beginCaptures": {
         "1": {
           "name": "keyword.other.ninja"
         }
       },
-      "comment": "Pool keyword and keywords for a pool.",
-      "end": "^(?=\\S)",
       "patterns": [
         {
           "include": "$self"
@@ -50,39 +50,38 @@
           "match": "\\b(?:depth)\\b",
           "name": "keyword.other.ninja"
         }
-      ]
+      ],
+      "end": "^(?=\\S)"
     },
     {
       "comment": "Other Keywords.",
-      "match": "^(?:build|rule|default|include|subninja)\\b",
-      "name": "keyword.other.ninja"
+      "name": "keyword.other.ninja",
+      "match": "^(?:build|rule|default|include|subninja)\\b"
     },
     {
       "comment": "Operators for variable assignment (=), rule definition (:), implicit (|) and order only (||) dependencies.",
-      "match": "(?:[=:]|\\|{1,2})(?=\\s)",
-      "name": "keyword.operator.ninja"
+      "name": "keyword.operator.ninja",
+      "match": "(?:[=:]|\\|{1,2})(?=\\s)"
     },
     {
       "comment": "Line wrap.",
-      "match": "\\$$",
-      "name": "keyword.operator.ninja"
+      "name": "keyword.operator.ninja",
+      "match": "\\$$"
     },
     {
       "comment": "Dollar literal.",
-      "match": "\\$\\$",
-      "name": "keyword.operator.ninja"
+      "name": "keyword.operator.ninja",
+      "match": "\\$\\$"
     },
     {
       "comment": "Simple variables, e.g. $var.",
-      "match": "\\$[[:alnum:]_-]+",
-      "name": "variable.other.ninja"
+      "name": "variable.other.ninja",
+      "match": "\\$[[:alnum:]_-]+"
     },
     {
       "comment": "Variables, e.g. ${some.var.name}.",
-      "match": "\\${[[:alnum:]_.-]+}",
-      "name": "variable.other.ninja"
+      "name": "variable.other.ninja",
+      "match": "\\${[[:alnum:]_.-]+}"
     }
-  ],
-  "scopeName": "source.ninja",
-  "uuid": "e837e9ed-6ad9-4103-b705-50503a86fc83"
+  ]
 }
