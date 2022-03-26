@@ -1,0 +1,26 @@
+{
+    "name": "ninja",
+    "displayName": "ninja-build",
+    "description": "A syntax highlighter for Ninja build files",
+    "version": "0.0.1",
+    "publisher": "surajbarkale",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "ninja",
+            "aliases": ["Ninja", "ninja"],
+            "extensions": [".ninja",".build"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "ninja",
+            "scopeName": "source.ninja",
+            "path": "./syntaxes/ninja.tmLanguage"
+        }]
+    }
+}
