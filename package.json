@@ -4,6 +4,7 @@
     "description": "A syntax highlighter for Ninja build files",
     "version": "1.0.0",
     "publisher": "qguv",
+    "repository": "https://github.com/qguv/ninja-vsx",
     "engines": {
         "vscode": "^1.5.0"
     },
