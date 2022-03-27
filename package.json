@@ -2,7 +2,7 @@
     "name": "ninja-vscode",
     "displayName": "build.ninja",
     "description": "A syntax highlighter for Ninja build files",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "publisher": "qguv",
     "repository": "https://github.com/qguv/ninja-vscode",
     "engines": {
