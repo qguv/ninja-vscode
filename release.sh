@@ -1,6 +1,6 @@
 #!/bin/sh
-# Usage: ./release.sh (NEW_VERSION | tag)
 set -e
+USAGE='Usage: ./release.sh (NEW_VERSION | tag)'
 
 CHANGELOG="CHANGELOG.md"
 SPEC="package.json"
@@ -28,7 +28,6 @@ clean_up() {
         git tag -d "$defer_tag_delete"
     fi
 }
-trap clean_up EXIT
 
 spec_version="$(sed -Ee "s/$VERSION_RE/\2/p" -n "$SPEC")"
 status="$(git status --porcelain=v1)"
@@ -47,6 +46,8 @@ prepare() {
 
     printf '%s\n' "appending new commits to $CHANGELOG"
     printf '\n## [%s]\n\n' "$new_version" >> "$CHANGELOG"
+
+    trap clean_up EXIT
     defer_reset_hard_to="HEAD"
     {
         git log "v$spec_version.." --reverse --pretty=format:'%s' -z
@@ -70,6 +71,7 @@ release() {
     fi
 
     printf '%s\n' "committing changes..."
+    trap clean_up EXIT
     defer_reset_to="HEAD"
     git add "$CHANGELOG" "$SPEC"
     git commit -m "prepare v$spec_version"
@@ -89,6 +91,13 @@ release() {
 case "$1" in
     --continue)
         release
+        ;;
+    --help|-h)
+        printf '%s\n' "$USAGE"
+        ;;
+    --*)
+        printf '%s\n' "$USAGE"
+        exit 16
         ;;
     *)
         prepare "$1"
