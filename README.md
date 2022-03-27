@@ -1,6 +1,6 @@
 # ninja-vsx
 
-A syntax highlighter for [Ninja build](https://martine.github.io/ninja/) files ported from [SublimeNinja](https://github.com/pope/SublimeNinja).
+A syntax highlighter for [Ninja build](https://ninja-build.org/) files ported from [SublimeNinja](https://github.com/pope/SublimeNinja).
 
 - [changelog](CHANGELOG.md)
 - [Ninja file reference](https://ninja-build.org/manual.html)
