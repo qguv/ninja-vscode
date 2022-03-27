@@ -1,6 +1,6 @@
 # ninja-vsx
 
-A syntax highlighter for [Ninja build](https://ninja-build.org/) files ported from [SublimeNinja](https://github.com/pope/SublimeNinja).
+A VSCode extension providing syntax highlighting for [Ninja build](https://ninja-build.org/) files.
 
 - [changelog](CHANGELOG.md)
 - [Ninja file reference](https://ninja-build.org/manual.html)
@@ -18,3 +18,8 @@ A syntax highlighter for [Ninja build](https://ninja-build.org/) files ported fr
 - run `./release.sh --continue` to commit, tag, and push the changes
 - upload to Open VSX
 - upload to the VS Marketplace
+
+## acknowledgements
+
+- originally ported from [SublimeNinja](https://github.com/pope/SublimeNinja) by [surajbarkale](https://marketplace.visualstudio.com/items?itemName=surajbarkale.ninja)
+- forked with permission by [qguv](https://github.com/qguv)
