@@ -1,12 +1,15 @@
 # ninja-vsx
 
-A syntax highlighter for [Ninja build][Ninja] files ported from [SublimeNinja][Sublime].
-
-[Ninja]: https://martine.github.io/ninja/
-[Sublime]: https://github.com/pope/SublimeNinja
+A syntax highlighter for [Ninja build](https://martine.github.io/ninja/) files ported from [SublimeNinja](https://github.com/pope/SublimeNinja).
 
 - [changelog](CHANGELOG.md)
 - [Ninja file reference](https://ninja-build.org/manual.html)
+
+## building
+
+- `npm install -g vsce` or use the [vsce AUR package](https://aur.archlinux.org/packages/vsce).
+- `vsce package`
+- the package will be built into `ninja-X.Y.Z.vsix` where `X.Y.Z` is the version
 
 ## releasing
 
