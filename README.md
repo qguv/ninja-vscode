@@ -1,4 +1,4 @@
-# ninja-vsx
+# ninja-vscode
 
 A VSCode extension providing syntax highlighting for [Ninja build](https://ninja-build.org/) files.
 
