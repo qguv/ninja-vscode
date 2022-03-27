@@ -16,8 +16,8 @@ A VSCode extension providing syntax highlighting for [Ninja build](https://ninja
 - run `./release.sh X.Y.Z` to update `package.json` and compile commit messages into the changelog
 - edit `CHANGELOG.md` to clean up the newly generated entry
 - run `./release.sh --continue` to commit, tag, and push the changes
-- upload to Open VSX
-- upload to the VS Marketplace
+- `npx ovsx publish -p $OPENVSX_TOKEN`
+- `vsce publish`
 
 ## acknowledgements
 
